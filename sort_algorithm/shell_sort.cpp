@@ -16,7 +16,7 @@ int main() {
 void shell_sort(int a[], int n) {
 	int temp;
 	int i;
-	for (int distance = n / 2;distance > 0;distance = distance / 2) {
+	for (int distance = n / 2;distance > 0;distance = distance / 2) {  //distance代表排序间隔，下面代码是插入排序
 		for (int p = distance;p < n;p = p + distance) {
 			temp = a[p];
 			for (i = p;i >= 0 & a[i - distance] > temp;i = i - distance) {
