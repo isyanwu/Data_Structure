@@ -5,9 +5,9 @@ void bubble_sort(int a[],int n);
 
 //测试
 int main() {
-	int a[6] = { 1,7,3,9,5,6 };
-	bubble_sort(a, 6);
-	array_output(a, 6);
+	int arr[6] = { 1,7,3,9,5,6 };
+	bubble_sort(arr, 6);
+	array_output(arr, 6);
 	system("pause");
 	return 0;
 }
