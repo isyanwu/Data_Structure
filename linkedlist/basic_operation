@@ -5,7 +5,14 @@ struct node {
 	node *next;
 };
 
-
+int main() {
+	node *head = creat_linkedlist();
+	head=append_data(head,5);
+	head = append_data(head, 6);
+	cout<<length(head);
+	system("pause");
+	return 0;
+}
 
 
 
