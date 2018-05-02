@@ -5,6 +5,11 @@ struct node {
 	node *next;
 };
 
+node * creat_linkedlist();//创建一个空链表
+node * append_data(node *head, int data);//在链表末端添加数据
+int length(node *head);//返回链表长度
+node *find_Kth(node *head, int k);//查找第k个节点，返回对应的地址（未找到则返回NULL）
+
 int main() {
 	node *head = creat_linkedlist();
 	head=append_data(head,5);
@@ -49,4 +54,18 @@ int length(node *head) {
 		len++;
 	}
 	return len;
+}
+
+//查找第k个节点，返回对应的地址（未找到则返回NULL）
+node *find_Kth(node *head, int k) {
+	node *link = head;
+	int i = 1;
+	while (link != NULL & i < k) {
+		link = link->next;
+		i++;
+	}
+	if (i == k) 
+		return link;
+	else 
+		return NULL;
 }
