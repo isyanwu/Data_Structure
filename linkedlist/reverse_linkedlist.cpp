@@ -53,8 +53,8 @@ node *reverse_linkedlist(node *head) {
 	if(head->next == NULL) {
 		return head;
 	}
-	node *pre = NULL;
-	node *last = head;
+	node *pre = NULL;  //指向前一个节点
+	node *last = head; //指向后一个节点
 	while (head != NULL) {
 		last = head->next;
 		head->next = pre;
