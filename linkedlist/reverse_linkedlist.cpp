@@ -9,6 +9,7 @@ struct node {
 node * creat_linkedlist();//创建一个空链表
 node * append_data(node *head, int data);//在链表末端添加数据
 node *reverse_linkedlist(node *head);//反转链表
+void print_linkedlist(node *head);//打印链表
 
 int main() {
 	node *head = creat_linkedlist();
@@ -64,4 +65,16 @@ node *reverse_linkedlist(node *head) {
 	delete last;
 	delete head;
 	return pre;
+}
+
+//打印链表
+void print_linkedlist(node *head) {
+	node *p = head;
+	if (p == NULL) {
+		cout << "链表为空" << endl;
+	}
+	while (p != NULL) {
+		cout << p->data << endl;
+		p =p->next;
+	}
 }
