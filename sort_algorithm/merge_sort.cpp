@@ -1,3 +1,24 @@
+#include<iostream>
+using namespace std;
+const int SIZE = 6;
+void print_arr(int a[], int length);
+void merge_sort(int a[], int start, int end);
+void merge(int a[],int start, int mid, int end);
+
+int main() {
+	int a[6] = { 5,6,2,6,3,9 };
+	merge_sort(a, 0, 5);
+	print_arr(a, 6);
+	system("pause");
+
+}
+
+void print_arr(int a[], int length) {
+	for (int i = 0; i < length;i++) {
+		cout << a[i] << endl;
+	}
+}
+
 void merge_sort(int a[], int start, int end) {
 	int mid = (start + end) / 2;
 	if (start < end) {
